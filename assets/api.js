@@ -1,7 +1,7 @@
 const endpoint = "http://localhost:3000";
 
 function bytesToSize(bytes, seperator = "") {
-    const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+    const sizes = [" Bytes", " KB", " MB", " GB", " TB"];
     if (bytes == 0) return "n/a";
     const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 10);
     if (i === 0) return `${bytes}${seperator}${sizes[i]}`;
@@ -35,7 +35,7 @@ async function getResource() {
     document.getElementById("boardname").innerHTML = resc_res["board-name"];
     document.getElementById("cpu").innerHTML = resc_res["cpu"];
     document.getElementById("cpu-count").innerHTML = resc_res["cpu-count"];
-    document.getElementById("cpu-freq").innerHTML = resc_res["cpu-frequency"];
+
     document.getElementById("free-ram").innerHTML = bytesToSize(resc_res["free-memory"]) + " / " + bytesToSize(resc_res["total-memory"]);
     document.getElementById("free-hdd").innerHTML = bytesToSize(resc_res["free-hdd-space"]) + " / " + bytesToSize(resc_res["total-hdd-space"]);
     document.getElementById("version").innerHTML = resc_res["version"];
@@ -44,6 +44,7 @@ async function getResource() {
 async function getResource_reload() {
     const resource_reload = await fetch(endpoint + "/system/resource");
     const resc_realtime = await resource_reload.json();
+    document.getElementById("cpu-freq").innerHTML = resc_realtime["cpu-frequency"] + " Mhz";
     document.getElementById("cpu-load").innerHTML = resc_realtime["cpu-load"] + "%";
     document.getElementById("uptime").innerHTML = resc_realtime["uptime"];
     setTimeout(() => getResource_reload(), 1000);

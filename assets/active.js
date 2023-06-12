@@ -32,7 +32,7 @@ async function getHs_Active() {
                 temp += "<td> No Comment";
             }
             temp += "</td></tr>";
-            setTimeout(() => getHs_Active(), 10000);
+            setTimeout(() => getHs_Active(), 1000);
         });
         document.getElementById("total_active").innerHTML = active_res.length;
         document.getElementById("tb_active").innerHTML = temp;
