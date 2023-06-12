@@ -97,6 +97,7 @@ async function getHs_Host() {
 async function getHs_Active() {
     const active = await fetch(endpoint + "/ip/hotspot/active");
     const active_res = await active.json();
+    // console.log(active_res);
 
     document.getElementById("total_active").innerHTML = active_res.length;
     // console.log(data);
