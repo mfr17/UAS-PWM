@@ -1,0 +1,13 @@
+:root {
+	--main-bg-color: #f1f5f4;
+	--secondary-bg-color: #15141c;
+	--btn-primary-color: dodgerblue;
+}
+
+body {
+	background-color: var(--main-bg-color);
+}
+
+.login-btn {
+	background-color: var(--btn-primary-color);
+}

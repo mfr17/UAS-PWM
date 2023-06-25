@@ -1,4 +1,4 @@
-const endpoint = "http://localhost:3000";
+const endpoint = "https://panel.ostore.my.id:3000";
 
 function bytesToSize(bytes, seperator = "") {
     const sizes = [" Bytes", " KB", " MB", " GB", " TB"];

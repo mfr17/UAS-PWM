@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
+
+    <!-- Fa CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Change Font -->
+    <style>
+        .body {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/vendor/css/bootstrap.min.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/vendor/js/bootstrap.min.js"></script>
+
+    <!-- Get Data From Rest API -->
+    <script src="/assets/api.js"></script>
+    <!-- <script src="test.js"></script> -->
+
+    <title>Dashboard - Mikrotik Monitor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ip.html">IP Address</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_active.html">User Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_connected.html">User Connected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ppp.html">PPPoE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container mt-4 text-center">
+        <h1>INI HEADER</h1>
+    </header>
+    <div class="container">
+        <div class="row mt-4 justify-content-center ailgn-items-center gap-2">
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 bg-info text-center">
+                <div class="p-4">
+                    <h1 id="total_active"></h1>
+                    <p>User Active</p>
+                </div>
+            </div>
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 bg-info text-center">
+                <div class="p-4">
+                    <h1 id="total_ppp"></h1>
+                    <p>PPP Active</p>
+                </div>
+            </div>
+            <div class="col-10 col-sm-4 col-md-4 col-lg-3 bg-info text-center">
+                <div class="p-4">
+                    <h1 id="total_host"></h1>
+                    <p>User Connected</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h6>Resource Info</h6>
+                <table class="table">
+                    <tr>
+                        <td>CPU Load</td>
+                        <td id="cpu-load"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td id="cpu"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU Count</td>
+                        <td id="cpu-count"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU Frequency</td>
+                        <td id="cpu-freq"></td>
+                    </tr>
+                    <tr>
+                        <td>Boardname</td>
+                        <td id="boardname"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <h6>System Info</h6>
+                <table class="table">
+                    <tr>
+                        <td>Identity</td>
+                        <td id="identity"></td>
+                    </tr>
+                    <tr>
+                        <td>Free Ram</td>
+                        <td id="free-ram"></td>
+                    </tr>
+                    <tr>
+                        <td>Free Storage</td>
+                        <td id="free-hdd"></td>
+                    </tr>
+                    <tr>
+                        <td>OS Version</td>
+                        <td id="version"></td>
+                    </tr>
+                    <tr>
+                        <td>Up Time</td>
+                        <td id="uptime"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
