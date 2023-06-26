@@ -15,6 +15,8 @@
 - View PPPoE Active
 
 ### WIP : 
+- Register for Reseller
+- Reseller Reports
 - Generate/Delete Hotspot Voucher
 - Generate/Delete Hotspot Profile
 - Generate/Delete PPPoE User
