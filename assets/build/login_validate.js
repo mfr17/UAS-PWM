@@ -1,10 +1,12 @@
 function login_validate() {
-	let username = document.getElementById("username").value;
-	let password = document.getElementById("password").value;
 	const input_user = document.getElementById("username");
 	const input_pass = document.getElementById("password");
+	const username = input_user.value;
+	const password = input_pass.value;
 	const message = document.getElementById("msg");
 	const loading = document.getElementById("loading");
+
+	// Validasi user dan redirect ke dashboard dalam 5 detik ketika username dan password sesuai
 	if (username == "demo" && password == "demo") {
 		input_user.classList.remove("border-danger");
 		input_pass.classList.remove("border-danger");

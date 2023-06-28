@@ -5,14 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/assets/build/style.css" />
-	<script src="/assets/build/form_validate.js"></script>
+	<script src="/assets/build/login_validate.js"></script>
 	<title>Login</title>
 </head>
 <body>
+	<!-- 100% Width -->
 	<div class="container vh-100">
 		<div class="h-100 row justify-content-center align-items-center">
+			<!-- Wrapper Form -->
 			<div class="col-md col-lg-8 col-xl-6 rounded-3 shadow-lg bg-dark-subtle">
-				<img src="https://placehold.co/200x200" class="img-fluid rounded-3 mx-auto d-block my-5" />
+				<img src="assets/img/favicon.png" alt="Mikhmon-logo" class="img-fluid rounded-3 mx-auto d-block my-5" />
 				<div class="text-center text-uppercase mb-5">
 					<h3>Login</h3>
 				</div>
@@ -27,12 +29,14 @@
 							placeholder="Password" />
 						<label for="password">Password</label>
 					</div>
+					<!-- Validation Status -->
 					<div class="mx-1 row">
 						<p class="col-6" id="msg"></p>
 						<p class="spinner-border text-success visually-hidden ms-auto d-flex align-items-center"
 							role="status" id="loading">
 						</p>
 					</div>
+					<!-- Trigger JS -->
 					<input type="button" id="login" value="Login"
 						class="w-100 text-white p-2 rounded-4 login-btn border border-0" onclick="login_validate()" />
 				</form>

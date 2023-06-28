@@ -1,29 +1,5 @@
-# UAS-PWM
+# TUGAS-PWM
 
+#### Disini saya menggabungkan dengan js untuk validasi karena project ini akan terus dikembangkan.
 
-### Goals :
-- Create a simple web based Mikrotik management
-
-
-### Features :
-- Login
-- View Dashboard
-- View IP Address
-- View Hotspot Active
-- View WiFi Connected
-- View PPP
-- View PPPoE Active
-
-### WIP : 
-- Register for Reseller
-- Reseller Reports
-- Generate/Delete Hotspot Voucher
-- Generate/Delete Hotspot Profile
-- Generate/Delete PPPoE User
-- Generate/Delete PPPoE Profile
-- Bind Hotspot User
-- Traffic Monitor
-- Income Reports (Daily, Weekly, Monthly)
-- Saldo for Member
-- Saldo for Reseller
-- Print Voucher
+Untuk sistem validasi saya membuat sendiri dengan js agar dapat login ke dashboard (walaupun masih kurang middleware), lalu untuk dashboard mungkin belum berjalan karena saya belum sempat untuk mengkonfigurasi API saya.
