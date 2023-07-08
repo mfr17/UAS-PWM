@@ -22,7 +22,6 @@ async function getHs_Active() {
             temp += "<td>" + itemData["address"];
             temp += "<td>" + itemData["mac-address"];
             temp += "<td>" + itemData["login-by"];
-
             temp += "<td>" + bytesToSize(itemData["bytes-in"]);
             temp += "<td>" + bytesToSize(itemData["bytes-out"]);
             temp += "<td>" + itemData["uptime"];

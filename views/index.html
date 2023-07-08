@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
+    <!-- Fa CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/assets/build/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/vendor/css/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="/assets/vendor/js/bootstrap.min.js"></script>
+    <!-- Get Data From Rest API -->
+    <script src="/assets/build/api.js"></script>
+    <!-- <script src="test.js"></script> -->
+    <title>Dashboard - Mikrotik Monitor</title>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ip.html">IP Address</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_active.html">User Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_connected.html">User Connected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ppp.html">PPPoE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="voucher.html">Voucher</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Section -->
+    <!-- Header Section -->
+    <header class="container mt-4 text-center">
+        <h1>INI HEADER</h1>
+    </header>
+    <!-- End Header Section -->
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Dashboard View Section -->
+        <div class="row mt-4 justify-content-center ailgn-items-center text-center gap-2 ">
+            <!-- Total user active atau Total Voucher yang aktif-->
+            <div class="col-5 col-sm-4 col-md-4 col-lg-2 rounded-3 border bg-blue shadow">
+                <div class="pt-4">
+                    <h1 id="total_active"></h1>
+                    <i class="fa fa-user"></i>
+                    <p>User Active</p>
+                </div>
+            </div>
+            <!-- Total PPP active -->
+            <div class="col-5 col-sm-4 col-md-4 col-lg-2 border rounded-3 bg-yellow shadow">
+                <div class="pt-4">
+                    <h1 id="total_ppp"></h1>
+                    <i class="fa fa-user-group"></i>
+                    <p>PPP Active</p>
+                </div>
+            </div>
+            <!-- Total user connected atau Total user yang connect ke WiFi -->
+            <div class="col-5 col-sm-4 col-md-4 col-lg-2 rounded-3 border bg-orange shadow">
+                <div class="pt-4">
+                    <h1 id="total_host"></h1>
+                    <i class="fa fa-wifi"></i>
+                    <p>User Connected</p>
+                </div>
+            </div>
+            <!-- Total voucher yang dibuat/ada -->
+            <div class="col-5 col-sm-4 col-md-4 col-lg-2 rounded-3 border bg-green shadow">
+                <div class="pt-4">
+                    <h1 id="total_vc"></h1>
+                    <i class="fa fa-ticket"></i>
+                    <p>Voucher</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Dashboard View Section -->
+        <!-- Info Section -->
+        <div class="row mt-4 pt-2 rounded-3 border bg-body-tertiary shadow">
+            <!-- Resources Section -->
+            <div class=" col">
+                <h6>Resource Info</h6>
+                <table class="table">
+                    <tr>
+                        <td>CPU Load</td>
+                        <td id="cpu-load"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td id="cpu"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU Count</td>
+                        <td id="cpu-count"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU Frequency</td>
+                        <td id="cpu-freq"></td>
+                    </tr>
+                    <tr>
+                        <td>Boardname</td>
+                        <td id="boardname"></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Systems Section -->
+            <div class="col">
+                <h6>System Info</h6>
+                <table class="table">
+                    <tr>
+                        <td>Identity</td>
+                        <td id="identity"></td>
+                    </tr>
+                    <tr>
+                        <td>Free Ram</td>
+                        <td id="free-ram"></td>
+                    </tr>
+                    <tr>
+                        <td>Free Storage</td>
+                        <td id="free-hdd"></td>
+                    </tr>
+                    <tr>
+                        <td>OS Version</td>
+                        <td id="version"></td>
+                    </tr>
+                    <tr>
+                        <td>Up Time</td>
+                        <td id="uptime"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- End Info Section -->
+    </div>
+</body>
+</html>
