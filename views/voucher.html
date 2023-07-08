@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
     <!-- Fa CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Change Font -->
     <!-- My CSS -->
     <link rel="stylesheet" href="/assets/build/style.css">
     <!-- Bootstrap CSS -->
@@ -17,9 +18,9 @@
     <!-- Bootstrap JS -->
     <script src="/assets/vendor/js/bootstrap.min.js"></script>
     <!-- Get Data From Rest API -->
-    <script src="/assets/build/ppp.js"></script>
+    <script src="/assets/build/voucher.js"></script>
     <!-- <script src="test.js"></script> -->
-    <title>PPP - Mikrotik Monitor</title>
+    <title>Voucher - Mikrotik Monitor</title>
 </head>
 <body>
     <!-- Navbar Section -->
@@ -45,10 +46,10 @@
                         <a class="nav-link" href="user_connected.html">User Connected</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PPPoE</a>
+                        <a class="nav-link" href="ppp.html">PPPoE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="voucher.html">Voucher</a>
+                        <a class="nav-link" href="#">Voucher</a>
                     </li>
                 </ul>
             </div>
@@ -63,19 +64,24 @@
     <!-- Content Section -->
     <!-- Responsive table for Mobile Devices -->
     <div class="container table-responsive rounded-3 border bg-body-tertiary pt-2 shadow">
-        <p>Total PPP : <span id="total_ppp"></span></p>
-        <table class="table table-bordered">
+        <span>Total Voucher : <span id="total_vc"></span></span>
+        <br>
+        <span>Voucher Sort by Profile</span>
+        <table class="mt-2 table table-bordered">
             <thead class="table-dark align-middle">
                 <tr>
-                    <th>ID</th>
-                    <th>Service</th>
-                    <th>Address</th>
-                    <th>Name</th>
-                    <th>Caller ID</th>
-                    <th>Up Time</th>
+                    <th>No</th>
+                    <th>User</th>
+                    <th>Profile</th>
+                    <th>Mac Address</th>
+                    <th class="text-end">Byte In</th>
+                    <th class="text-end">Byte Out</th>
+                    <th class="text-end">Up Time</th>
+                    <th class="text-end">Limit Up Time</th>
+                    <th>Comment</th>
                 </tr>
             </thead>
-            <tbody id="tb_ppp"></tbody>
+            <tbody id="tb_vc" class="align-middle"></tbody>
         </table>
     </div>
     <!-- End Content Section -->

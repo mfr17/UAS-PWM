@@ -4,19 +4,19 @@ async function getPPP() {
     const ppp_res = await ppp.json();
     if (ppp_res.length >= 0) {
         var temp = "";
+        i = 0;
         ppp_res.forEach((itemData) => {
+            i++;
             temp += "<tr>";
-            temp += "<td>" + itemData[".id"];
+            temp += "<td>" + i;
             temp += "<td>" + itemData["service"];
             temp += "<td>" + itemData["address"];
             temp += "<td>" + itemData["name"];
             temp += "<td>" + itemData["caller-id"];
             temp += "<td>" + itemData["uptime"];
             temp += "</td></tr>";
-
-            // console.log(itemData);
         });
-        // document.getElementById("total_ppp").innerHTML = ppp_res.length;
+        document.getElementById("total_ppp").innerHTML = ppp_res.length;
         document.getElementById("tb_ppp").innerHTML = temp;
     }
 }
