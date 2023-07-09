@@ -1,4 +1,4 @@
-const endpoint = "http://localhost:3000";
+const endpoint = "http://103.175.219.24:3000";
 async function getPPP() {
     const ppp = await fetch(endpoint + "/ppp/active");
     const ppp_res = await ppp.json();

@@ -1,4 +1,4 @@
-const endpoint = "http://localhost:3000";
+const endpoint = "http://103.175.219.24:3000";
 
 function bytesToSize(bytes, seperator = "") {
     const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
