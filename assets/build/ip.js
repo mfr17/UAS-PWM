@@ -1,4 +1,4 @@
-const endpoint = "http://103.175.219.24:3000";
+const endpoint = "https://reverse.ostore.my.id";
 
 async function getIpAddress() {
     const ip = await fetch(endpoint + "/ip/address");

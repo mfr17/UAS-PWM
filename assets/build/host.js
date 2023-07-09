@@ -1,4 +1,4 @@
-const endpoint = "http://103.175.219.24:3000";
+const endpoint = "https://reverse.ostore.my.id";
 async function getHs_Host() {
     const host = await fetch(endpoint + "/ip/hotspot/host");
     const host_res = await host.json();

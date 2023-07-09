@@ -4,6 +4,8 @@
 Semua data yang ditampilkan merupakan data dari Mikrotik saya yang ada di rumah secara realtime dengan memanfaatkan fitur RestAPI yang ada pada RouterOS v7+.
 Data diambil menggunakan JS Vanilla lalu di DOM ke file HTML
 
+Saya menggunakan 2 buah VPS yang mana salah satunya berfungsi sebagai reverse proxy karena RestAPI dari RouterOS v7 terdapat kendapa pada cors maka dari itu saya gunakan reverse proxy, dan salah satu VPS sebagai hosting.
+
 ### Goals :
 - Create a simple web based Mikrotik management
 

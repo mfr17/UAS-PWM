@@ -17,7 +17,7 @@ function login_validate() {
 		message.textContent = "Login Successfully";
 		loading.classList.remove('visually-hidden');
 		setTimeout(function () {
-			window.location.href = "../../views/dashboard.html";
+			window.location.href = "../../views/index.html";
 		}, 5000);
 	} else if (username == "") {
 		input_user.classList.add("border-danger");
