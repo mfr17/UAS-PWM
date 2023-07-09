@@ -1,5 +1,6 @@
 # UAS-PWM
 
+Terkadang data tidak tampil dikarenkan koneksi internet kurang stabil pada Router Saya
 
 Semua data yang ditampilkan merupakan data dari Mikrotik saya yang ada di rumah secara realtime dengan memanfaatkan fitur RestAPI yang ada pada RouterOS v7+.
 Data diambil menggunakan JS Vanilla lalu di DOM ke file HTML
